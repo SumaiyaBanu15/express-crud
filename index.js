@@ -2,15 +2,14 @@ const express = require('express') //commonJS Import older version
 // import express from 'express'//ES Module Import add "type": "module" in package.json
 
 const dotenv = require('dotenv')
+const cors = require('cors')
 const AppRoutes = require('./src/Routes')
 
 dotenv.config()
 const PORT  = process.env.PORT
-
 const app = express()
+app.use(cors())
 app.use(express.json())
-
 app.use('/',AppRoutes)
-
 
 app.listen(PORT,()=>console.log(`Server listening to port ${PORT}`))

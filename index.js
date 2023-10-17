@@ -1,9 +1,9 @@
-const express = require('express') //commonJS Import older version
-// import express from 'express'//ES Module Import add "type": "module" in package.json
+// const express = require('express') //commonJS Import older version
+import express from 'express'//ES Module Import add "type": "module" in package.json
 
-const dotenv = require('dotenv')
-const cors = require('cors')
-const AppRoutes = require('./src/Routes')
+import dotenv from 'dotenv'
+import cors from 'cors'
+import AppRoutes from './src/routes/index.js'
 
 dotenv.config()
 const PORT  = process.env.PORT

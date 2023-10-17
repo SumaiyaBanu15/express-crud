@@ -95,7 +95,7 @@ const coupons =[
         }
     }
     
-    module.exports = {
+    export default {
         getAllCoupons,
         getCouponsById,
         createCoupon,

@@ -1,9 +1,9 @@
-import userModel from '../models/user.js'
+import userModel from '../models/User.js'
 import Auth from '../common/auth.js'
 
 const getUsers = async(req,res)=>{
     try {
-        let users = await userModel.find()
+        let users = await userModel.find({},{password:0})
         res.status(200).send({
             message:"User data Fetched Successsfully",
             users
@@ -48,7 +48,7 @@ const create = async(req,res)=>{
         }
     } catch (error) {
         res.status(500).send({
-            message:"Inrernal Server Error",
+            message:"Internal Server Error",
             error:error.message
         })
     }

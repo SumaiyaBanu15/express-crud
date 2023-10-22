@@ -16,7 +16,7 @@ const userSchema = new mongoose.Schema({
 },
 {
     collection:'users',
-    versionkey:false
+    versionKey:false
 })
 
 const userModel = mongoose.model('users',userSchema)
